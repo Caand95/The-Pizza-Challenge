@@ -1,0 +1,14 @@
+THE PIZZA CHALLENGE DATABASE NOTER:
+SIZE_PRICE CHARS:
+A = Almindelig
+B = Børnepizza
+F = Familie
+
+
+S = Small
+M = Medium
+L = Large
+
+
+PIZZA nr. 1 - 80 (FRIE 55-80)
+BØRNEPIZZA nr. 45 - 50 (FRIE 48 49)
