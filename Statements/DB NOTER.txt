@@ -3,12 +3,17 @@ SIZE_PRICE CHARS:
 A = Almindelig
 B = Børnepizza
 F = Familie
-
+N = INGEN TYPE VIDST PÅ SIDEN
 
 S = Small
 M = Medium
 L = Large
 
 
-PIZZA nr. 1 - 80 (FRIE 55-80)
-BØRNEPIZZA nr. 45 - 50 (FRIE 48 49)
+PIZZA nr. 1 - 80 			(FRIE 50 - 80)
+BØRNEPIZZA nr. 81 - 85 		(FRIE 84 , 85)
+INDBAGT PIZZA nr. 86 - 100 	(FRIE 87 - 100)
+PASTARETTER nr. 101 - 145	(FRIE 121 - 145)
+PANINO nr. 146 - 170 		(FRIE 163 - 170)
+SANDWICH nr. 171 - 190 		(FRIE 189 - 190)
+SALATER nr. 190 - 200		(FRIE 196 - 200)
