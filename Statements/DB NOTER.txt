@@ -9,7 +9,7 @@ S = Small
 M = Medium
 L = Large
 
-
+[ITEM]
 PIZZA nr. 1 - 80 			(FRIE 50 - 80)
 BØRNEPIZZA nr. 81 - 85 		(FRIE 84 , 85)
 INDBAGT PIZZA nr. 86 - 100 	(FRIE 87 - 100)
@@ -22,4 +22,7 @@ ANDET nr. 221 - 230			(FRIE 202 - 230)
 DESSERTER nr. 231 - 250		(FRIE 232 - 250)
 DRIKKELSE nr. 251 - 300		(FRIE 256 - 300)
 
-
+[INGREEDIENS]
+ALMINDELIGE nr. 0-100 		(FRIE 78 - 100)
+DRIKKELSE nr. 101 - 150 	(FRIE 1 - 150)
+ANDET nr. 151 - 200			(FRIE 152 - 200)
