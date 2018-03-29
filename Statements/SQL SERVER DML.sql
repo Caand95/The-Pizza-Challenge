@@ -11,8 +11,21 @@ Insert into [Item_Type] values(8,'Grillmad');
 Insert into [Item_Type] values(11,'Andet');
 Insert into [Item_Type] values(12, 'Desserter');
 
-Insert into [Item] values(,'Andet');
-
+Insert into [Item] values(251,'Coca-Cola',1);
+Insert into [Size_Price] values(251,'S',23.00);
+Insert into [Size_Price] values(251,'L',32.00);
+Insert into [Item] values(252,'Coca-Cola Light',1);
+Insert into [Size_Price] values(252,'S',23.00);
+Insert into [Size_Price] values(252,'L',32.00);
+Insert into [Item] values(253,'Sprite',1);
+Insert into [Size_Price] values(253,'S',23.00);
+Insert into [Size_Price] values(253,'L',32.00);
+Insert into [Item] values(254,'Fanta',1);
+Insert into [Size_Price] values(254,'S',23.00);
+Insert into [Size_Price] values(254,'L',32.00);
+Insert into [Item] values(255,'Italiensk Øl',1);
+Insert into [Size_Price] values(255,'S',25.00);
+Insert into [Size_Price] values(255,'L',45.00);
 
 Insert into [Item] values(1,'Margherita',2);
 Insert into [Size_Price] values(1,'A',50.00);
@@ -168,10 +181,12 @@ Insert into [Size_price] values(82, 'B', 44.00);
 Insert into [Item] values(83,'Børnepizza - Skinke',2);
 Insert into [Size_price] values(83, 'B', 44.00);
 
+
 Insert into [Item] values(86, 'Calzone 1', 3);
 Insert into [Size_price] values(86, 'N', 70.00);
 Insert into [Item] values(87, 'Calzone 2', 3);
 Insert into [Size_price] values(87, 'N', 72.00);
+
 
 Insert into [Item] values(101, 'Lasagne', 4);
 Insert into [Size_price] values(101, 'N', 60.00);
@@ -216,6 +231,7 @@ Insert into [Size_price] values(120, 'N', 75.00);
 Insert into [Item] values(121, 'Amatriciana', 4);
 Insert into [Size_price] values(121, 'N', 69.00);
 
+
 Insert into [Item] values(146, 'Shawarma Ciabatta', 5);
 Insert into [Size_price] values(146, 'N', 44.00);
 Insert into [Item] values(147, 'Skinke Ciabatta', 5);
@@ -250,6 +266,7 @@ Insert into [Item] values(161, 'Gorgonzola Ciabatta', 5);
 Insert into [Size_price] values(161, 'N', 44.00);
 Insert into [Item] values(162, 'Røget Laks & Pesto Ciabatta', 5);
 Insert into [Size_price] values(162, 'N', 48.00);
+
 
 Insert into [Item] values(171, 'Skinke Sandwich' ,6);
 Insert into [Size_price] values(171, 'N', 50.00);
@@ -288,6 +305,7 @@ Insert into [Size_price] values(187, 'N', 54.00);
 Insert into [Item] values(188, 'Røget laks & Rucola Sandwich',6);
 Insert into [Size_price] values(188, 'N', 54.00);
 
+
 Insert into [Item] values(191, 'Insalata Mista',7);
 Insert into [Size_price] values(191, 'N', 46.00);
 Insert into [Item] values(192, 'Insalata Di Pomodoro',7);
@@ -299,23 +317,24 @@ Insert into [Size_price] values(194, 'N', 52.00);
 Insert into [Item] values(195, 'Røget Laks',7);
 Insert into [Size_price] values(195, 'N', 54.00);
 
-Insert into [Item] values(196, 'Pomme Frites',8);
+
+Insert into [Item] values(201, 'Pomme Frites',8);
 Insert into [Size_price] values(196, 'S', 20.00);
 Insert into [Size_price] values(196, 'L', 28.00);
 
 
+Insert into [Item] values(221, 'Bruschetta',11);
+Insert into [Size_price] values(221, 'N', 26.00);
+Insert into [Item] values(222, 'Bruschetta - Med Pesto',11);
+Insert into [Size_price] values(223, 'N', 30.00);
+Insert into [Item] values(223, 'Bæger dressing',11);
+Insert into [Size_price] values(223, 'N', 8.00);
+Insert into [Item] values(224, 'Hjemmelavet Pesto',6);
+Insert into [Size_price] values(224, 'N', 16.00);
 
 
-Insert into [Item] values(, 'Bruschetta',11);
-Insert into [Size_price] values(, 'N', 26.00);
-Insert into [Item] values(, 'Bruschetta - Med Pesto',11);
-Insert into [Size_price] values(, 'N', 30.00);
-Insert into [Item] values(, 'Bæger dressing',11);
-Insert into [Size_price] values(, 'N', 8.00);
-Insert into [Item] values(, 'Hjemmelavet Pesto',6);
-Insert into [Size_price] values(, 'N', 16.00);
-
-
+Insert into [Item] values(231, 'Hjemmelavet Italiensk Is',12);
+Insert into [Size_price] values(231, 'N', 50.00);
 
 
 
