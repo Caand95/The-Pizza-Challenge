@@ -95,4 +95,4 @@ Insert into [Ingrediens] values(101, 'perroni morretti');
 
 Insert into [Ingrediens] values(151, 'i b�ger');
 
-Insert into [Ingrediens] values(1001, '1 stk. med familiepizza bestående af 2 forskellige pizzaer');
+Insert into [Ingrediens] values(1001, '1 stk. med familiepizza best�ende af 2 forskellige pizzaer');

@@ -21,7 +21,7 @@ CREATE TABLE [Order] (
 
 CREATE TABLE [Ingrediens] (
   [ID_Ingrediens] int,
-  [Name] varchar(50),
+  [Name] varchar(100),
   PRIMARY KEY ([ID_Ingrediens])
 );
 
