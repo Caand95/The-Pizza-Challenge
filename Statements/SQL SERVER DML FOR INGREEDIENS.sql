@@ -31,7 +31,6 @@ Insert into [Ingrediens] values(27, 'k�dfars');
 Insert into [Ingrediens] values(28, 'katoffelskiver');
 Insert into [Ingrediens] values(29, 'k�dstrimler');
 Insert into [Ingrediens] values(30, 'pesto');
-Insert into [Ingrediens] values(31, 'gr�n peber');
 Insert into [Ingrediens] values(31, 'rucola');
 Insert into [Ingrediens] values(32, 'mortadellap�lse');
 Insert into [Ingrediens] values(33, 'italiensk salami');
@@ -81,6 +80,13 @@ Insert into [Ingrediens] values(75, 'olivenolie');
 Insert into [Ingrediens] values(76, 'oregano');
 Insert into [Ingrediens] values(77, 'hvidl�gsbr�d');
 Insert into [Ingrediens] values(78, 'shawarma');
+Insert into [Ingrediens] values(79, 'gr�n peber');
+Insert into [Ingrediens] values(80, 'broccoli');
+Insert into [ingrediens] values(81, 'parmasanost');
+Insert into [ingrediens] values(82, 'trøffel');
+
 Insert into [Ingrediens] values(101, 'perroni morretti');
 
 Insert into [Ingrediens] values(151, 'i b�ger');
+
+Insert into [Ingrediens] values(1001, '1 stk. med familiepizza bestående af 2 forskellige pizzaer');

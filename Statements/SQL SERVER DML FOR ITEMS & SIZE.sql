@@ -1,4 +1,4 @@
-# ITEMS & SIZE 
+# ITEMS & SIZE
 Use [TPC];
 
 Insert into [Item_Type] values(1,'Drikkevarer');
@@ -163,16 +163,16 @@ Insert into [Size_price] values(44, 'F', 128.00);
 Insert into [Item] values(45,'Moniga',2);
 Insert into [Size_price] values(46, 'A', 82.00);
 Insert into [Size_price] values(46, 'F', 136.00);
-Insert into [Item] values(47,'Vitello',2);
+Insert into [Item] values(46,'Vitello',2);
 Insert into [Size_price] values(47, 'A', 75.00);
 Insert into [Size_price] values(47, 'F', 126.00);
-Insert into [Item] values(48,'Ginova',2);
+Insert into [Item] values(47,'Ginova',2);
 Insert into [Size_price] values(48, 'A', 80.00);
 Insert into [Size_price] values(48, 'F', 132.00);
-Insert into [Item] values(49,'Lago',2);
+Insert into [Item] values(48,'Lago',2);
 Insert into [Size_price] values(49, 'A', 82.00);
 Insert into [Size_price] values(49, 'F', 134.00);
-Insert into [Item] values(50,'2-Delt Familiepizza',2);
+Insert into [Item] values(49,'2-Delt Familiepizza',2);
 Insert into [Size_price] values(50, 'F', 130.00);
 
 Insert into [Item] values(81,'Børnepizza - Bacon',2);
@@ -336,10 +336,3 @@ Insert into [Size_price] values(224, 'N', 16.00);
 
 Insert into [Item] values(231, 'Hjemmelavet Italiensk Is',12);
 Insert into [Size_price] values(231, 'N', 50.00);
-
-
-
-
-
-
-
