@@ -327,7 +327,7 @@ Insert into [Size_price] values(196, 'L', 28.00);
 Insert into [Item] values(221, 'Bruschetta',11);
 Insert into [Size_price] values(221, 'N', 26.00);
 Insert into [Item] values(222, 'Bruschetta - Med Pesto',11);
-Insert into [Size_price] values(223, 'N', 30.00);
+Insert into [Size_price] values(222, 'N', 30.00);
 Insert into [Item] values(223, 'Bæger dressing',11);
 Insert into [Size_price] values(223, 'N', 8.00);
 Insert into [Item] values(224, 'Hjemmelavet Pesto',6);
