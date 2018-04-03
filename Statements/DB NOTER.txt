@@ -1,8 +1,10 @@
 THE PIZZA CHALLENGE DATABASE NOTER:
+
 SIZE_PRICE CHARS:
 A = Almindelig
 B = Børnepizza
 F = Familie
+
 N = INGEN TYPE VIDST PÅ SIDEN
 
 S = Small

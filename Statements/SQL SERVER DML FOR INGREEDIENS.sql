@@ -84,6 +84,7 @@ Insert into [Ingrediens] values(79, 'gr�n peber');
 Insert into [Ingrediens] values(80, 'broccoli');
 Insert into [ingrediens] values(81, 'parmasanost');
 Insert into [ingrediens] values(82, 'trøffel');
+insert into [ingrediens] values(83, 'ovnbagt pasta');
 
 Insert into [Ingrediens] values(101, 'perroni morretti');
 
