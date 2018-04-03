@@ -51,7 +51,7 @@ Insert into [Ingrediens] values(47, 'vitello (tynde skiver kalvek�d)');
 Insert into [Ingrediens] values(48, 'tr�ffelsauce');
 Insert into [Ingrediens] values(49, 'kartofler');
 Insert into [Ingrediens] values(50, 'cherrytomater');
-Insert into [Ingrediens] values(51, 'parmesanost');
+Insert into [Ingrediens] values(51, '');
 Insert into [Ingrediens] values(52, 'kapers');
 Insert into [Ingrediens] values(53, 'salami');
 
@@ -85,6 +85,8 @@ Insert into [Ingrediens] values(80, 'broccoli');
 Insert into [ingrediens] values(81, 'parmasanost');
 Insert into [ingrediens] values(82, 'trøffel');
 insert into [ingrediens] values(83, 'ovnbagt pasta');
+insert into [ingrediens] values(84, 'pasta');
+insert into [ingrediens] values(85, 'tomatsauce');
 
 Insert into [Ingrediens] values(101, 'perroni morretti');
 
