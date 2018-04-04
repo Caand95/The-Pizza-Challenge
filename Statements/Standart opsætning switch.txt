@@ -1,0 +1,64 @@
+ena
+conf t
+hostname #
+no ip domain-lookup
+security passwords min-lenght 10
+enable secret cisco12345
+banner motd #Unauthorized access prohibited!#
+service password-encryption 
+no ip http server
+end 
+
+conf t 
+line con 0
+password ciscoconpass
+exec-timeout 5 0
+login
+logging syn
+end
+
+conf t
+line vty 0 15
+password ciscovtypass
+exec-timeout 5 0
+login
+logging syn
+end
+
+conf t 
+interface range f0/1 - 24, g0/1 - 2
+no shutdown
+end
+
+cop run sta
+
+conf t
+hostname Swit
+
+  
+
+
+#SSH
+
+conf t
+ip domain-name ciscoLab.com
+crypto key generate rsa
+
+line vty 0 15
+login local
+transport input ssh
+end
+
+conf t
+username admin privilege 15 secret cisco12345
+end
+
+#SWITCHPORT
+conf
+switchport mode {access | trunk}
+switchport port-security maximum #
+swithcport port-securitym ?
+switchport port-security mac-address sticky fa0/5
+switchport port-security violation shutdown
+switchport access vlan 10
+switchport trunk allowed vlan all

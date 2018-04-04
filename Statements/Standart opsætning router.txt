@@ -1,0 +1,88 @@
+ena
+conf t
+hostname #
+no ip domain-lookup
+security passwords min-lenght 10
+enable secret cisco12345
+banner motd #Unauthorized access prohibited!#
+service password-encryption 
+end 
+
+conf t 
+line con 0
+password ciscoconpass
+exec-timeout 5 0
+login
+logging syn
+end
+
+conf t
+line vty 0 4
+password ciscovtypass
+exec-timeout 5 0
+login
+logging syn
+end
+
+cop run sta
+
+conf t
+hostname Rout
+
+
+int g0/1
+ip address 10.20.0.1 255.255.255.0
+no shutdown
+
+int g0/0
+ip address 10.0.0.2 255.255.255.252
+no shutdown
+end
+
+cop run sta
+
+conf t
+ip domain-name Leet.local
+crypto key generate rsa
+
+line vty 0 4
+login local
+transport input ssh
+
+username admin privilege 15 secret bestpassword
+end 
+
+cop run sta
+
+conf t
+
+interface g0/1
+encapsulation dot1q 0
+ip address 10.20.0.1 255.255.255.0
+no shutdown
+
+interface g0/1.10
+encapsulation dot1q 10
+ip address 10.20.10.1 255.255.255.0
+no shutdown
+
+interface g0/1.20
+encapsulation dot1q 20
+ip address 10.20.20.1 255.255.255.0
+no shutdown
+
+interface g0/1.30
+encapsulation dot1q 30
+ip address 10.20.30.1 255.255.255.0
+no shutdown
+
+interface g0/1
+no shutdown
+end
+
+conf t
+
+cop run sta
+
+
+	
