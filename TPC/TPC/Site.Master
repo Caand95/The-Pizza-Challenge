@@ -38,39 +38,81 @@
             </Scripts>
         </asp:ScriptManager>
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" runat="server" href="~/Default">Pane D´oro Italiano <span class="glyphicon glyphicon-envelope"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Default">Forside</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Contact">Kontakt</a>
+                    </li>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Account/Login">Admin Login</a></li>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <li class="-link"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Menu</a></li>
+                            <li class="-link"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Konto</a></li>
+                            <li class="-link">
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log af" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            </li>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Søg">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search<div class="glyphicon glyphicon-search"></div></button>
+                </form>
+            </div>
+        </nav>
+
+
         <div class="container">
             <div class="row">
-                <div id="Header" class="col-sm-12">
-                    <h1>Pane D´oro Italiano</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div id="Content" class="col-sm-10">
+                <div class="col-md-9">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-                <div id="Sidenav" class="col-sm-2">
-                    <ul class="nav navbar-nav nav-stacked" data-spy="affix">
-                        <li class="list-unstyled"><a runat="server" href="~/Default">Forside</a></li>
-                        <li class="list-unstyled"><a runat="server" href="~/Default">Menu</a></li>
-                        <li class="list-unstyled"><a runat="server" href="~/Contact">Kontakt</a></li>
-                        <asp:LoginView runat="server" ViewStateMode="Disabled">
-                            <AnonymousTemplate>
-                                <li class="list-unstyled"><a runat="server" href="~/Account/Login">Admin Login</a></li>
-                            </AnonymousTemplate>
-                            <LoggedInTemplate>
-                                <li class="list-unstyled"><a runat="server" href="~/Account/Manage">Administrer Menu</a></li>
-                                <li class="list-unstyled"><a runat="server" href="~/Account/Manage">Administrer Konto</a></li>
-                                <li class="list-unstyled">
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log af" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </LoggedInTemplate>
-                        </asp:LoginView>
-                    </ul>
+                <div class="col-md-3">
+                    <div class="card text-black bg-secondary  mb-3">
+                        <h3 class="card-header">Indkøbskurv</h3>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio
+                                <button type="button" class="btn btn-danger btn-sm">
+                                    <span class="glyphicon glyphicon-remove"></span>Remove 
+                                </button>
+                            </li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            2 days ago
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div id="Footer" class="col-sm-12">
+                <div id="Footer" class="col-sm-12" style="color: white">
 
                     <hr />
                     <footer>
