@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6" style="text-align: center; margin-top: 90px; color:white">
+            <div class="col-md-6" style="text-align: center; margin-top: 90px">
                 <h3>Find os her.</h3>
                 <address>
                     Sct Hansgade 26<br />
@@ -25,7 +25,7 @@
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAeQqMNq0zlcUdToRYeUQD7b7zVNNEGVUU&q=place_id:ChIJubXGt8-RUkYRXquBDJ7YJh0"
                     allowfullscreen></iframe>
             </div>
-            <div class="col-md-6" style="text-align: center; margin-top: 40px; color: white">
+            <div class="col-md-6" style="text-align: center; margin-top: 40px">
                 <h3>Åbningstider.</h3>
                 <address>
                     Mandag 11:00 - 22:00<br />
