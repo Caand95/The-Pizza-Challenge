@@ -62,29 +62,21 @@ no shutdown
 interface range f0/1 - 6
 switchport mode access
 switchport access vlan 100
-switchport port-security mac-address sticky 
-switchport port-security violation shutdown
 no shutdown
 
 interface range f0/7 - 12
 switchport mode access
 switchport access vlan 10
-switchport port-security mac-address sticky 
-switchport port-security violation shutdown
 no shutdown
 
 interface range f0/13 - 18
 switchport mode access
 switchport access vlan 20
-switchport port-security mac-address sticky 
-switchport port-security violation shutdown
 no shutdown
 
 interface range f0/19 - 24
 switchport mode access
 switchport access vlan 30
-switchport port-security mac-address sticky 
-switchport port-security violation shutdown
 no shutdown
 end 
 cop run sta
@@ -93,8 +85,6 @@ conf t
 
 interface g0/1
 switchport mode trunk
-switchport port-security mac-address sticky 
-switchport port-security violation shutdown
 switchport trunk allowed vlan all
 no shutdown
 end 
