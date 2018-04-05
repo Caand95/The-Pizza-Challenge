@@ -2,7 +2,7 @@ ena
 conf t
 hostname #
 no ip domain-lookup
-security passwords min-lenght 10
+security passwords min-length 10
 enable secret cisco12345
 banner motd #Unauthorized access prohibited!#
 service password-encryption 
@@ -27,11 +27,10 @@ end
 cop run sta
 
 conf t
+ip-route 0.0.0.0 0.0.0.0 10.0.0.1
 hostname Rout
 
-
 int g0/1
-ip address 10.20.0.1 255.255.255.0
 no shutdown
 
 int g0/0
@@ -42,8 +41,9 @@ end
 cop run sta
 
 conf t
-ip domain-name Leet.local
 crypto key generate rsa
+ip domain-name Leet.local
+
 
 line vty 0 4
 login local
@@ -56,8 +56,8 @@ cop run sta
 
 conf t
 
-interface g0/1
-encapsulation dot1q 0
+interface g0/1.100
+encapsulation dot1q 100
 ip address 10.20.0.1 255.255.255.0
 no shutdown
 
@@ -75,14 +75,48 @@ interface g0/1.30
 encapsulation dot1q 30
 ip address 10.20.30.1 255.255.255.0
 no shutdown
-
-interface g0/1
-no shutdown
 end
 
+cop run sta
+
 conf t
+
+service dhcp
+ip dhcp pool vlan100
+network 10.20.0.0 255.255.255.0
+default-router 10.20.0.1 255.255.255.0
+dns-server 10.20.0.2
+
+ip dhcp pool vlan10
+network 10.20.10.0 255.255.255.0
+default-router 10.20.10.1 255.255.255.0
+dns-server 10.20.0.2
+
+ip dhcp pool vlan20
+network 10.20.20.0 255.255.255.0
+default-router 10.20.20.1 255.255.255.0
+dns-server 10.20.0.2
+
+ip dhcp pool vlan30
+network 10.20.30.0 255.255.255.0
+default-router 10.20.30.1 255.255.255.0
+dns-server 10.20.0.2
+
+end
+
+cop run sta
+
+conf t
+
+ip dhcp excluded-address 10.20.0.1 10.20.0.2
+ip dhcp excluded-address 10.20.10.1 10.20.10.1
+ip dhcp excluded-address 10.20.20.1 10.20.20.1
+ip dhcp excluded-address 10.20.30.1 10.20.30.1
+
+ip dhcp global-options
+dns-server 10.20.0.2
+end
 
 cop run sta
 
 
-	

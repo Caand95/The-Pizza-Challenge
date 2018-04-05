@@ -27,7 +27,7 @@ end
 
 conf t 
 interface range f0/1 - 24, g0/1 - 2
-no shutdown
+shutdown 
 end
 
 cop run sta
@@ -35,14 +35,9 @@ cop run sta
 conf t
 hostname Swit
 
-  
-
-
-#SSH
-
 conf t
-ip domain-name ciscoLab.com
 crypto key generate rsa
+ip domain-name ciscoLab.com
 
 line vty 0 15
 login local
@@ -50,15 +45,58 @@ transport input ssh
 end
 
 conf t
-username admin privilege 15 secret cisco12345
+username admin privilege 15 secret bestpassword
 end
 
-#SWITCHPORT
-conf
-switchport mode {access | trunk}
-switchport port-security maximum #
-swithcport port-securitym ?
-switchport port-security mac-address sticky fa0/5
+
+conf t
+vlan 100
+no shutdown
+vlan 10
+no shutdown 
+vlan 20
+no shutdown
+vlan 30
+no shutdown
+
+interface range f0/1 - 6
+switchport mode access
+switchport access vlan 100
+switchport port-security mac-address sticky 
 switchport port-security violation shutdown
+no shutdown
+
+interface range f0/7 - 12
+switchport mode access
 switchport access vlan 10
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown
+no shutdown
+
+interface range f0/13 - 18
+switchport mode access
+switchport access vlan 20
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown
+no shutdown
+
+interface range f0/19 - 24
+switchport mode access
+switchport access vlan 30
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown
+no shutdown
+end 
+cop run sta
+
+conf t
+
+interface g0/1
+switchport mode trunk
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown
 switchport trunk allowed vlan all
+no shutdown
+end 
+cop run sta
+
