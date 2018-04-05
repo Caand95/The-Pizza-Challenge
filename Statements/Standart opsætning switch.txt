@@ -62,16 +62,22 @@ no shutdown
 interface range f0/1 - 6
 switchport mode access
 switchport access vlan 100
+switchport port-security maximum 10
+switchport port-security violation Restrict
 no shutdown
 
 interface range f0/7 - 12
 switchport mode access
 switchport access vlan 10
+switchport port-security maximum 1
+switchport port-security violation Shutdown
 no shutdown
 
 interface range f0/13 - 18
 switchport mode access
 switchport access vlan 20
+switchport port-security maximum 4
+switchport port-security violation shutdown
 no shutdown
 
 interface range f0/19 - 24
@@ -86,6 +92,8 @@ conf t
 interface g0/1
 switchport mode trunk
 switchport trunk allowed vlan all
+switchport port-security maximum 4
+switchport port-security violation shutdown
 no shutdown
 end 
 cop run sta
