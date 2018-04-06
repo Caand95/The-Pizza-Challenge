@@ -18,6 +18,7 @@ namespace TPC
     {
 
         SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["TPCConnectionString"].ConnectionString);
+        SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString);
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
