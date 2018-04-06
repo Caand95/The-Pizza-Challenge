@@ -17,7 +17,6 @@ namespace TPC
     public partial class SiteMaster : MasterPage
     {
 
-        SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["TPCConnectionString"].ConnectionString);
         SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString);
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
