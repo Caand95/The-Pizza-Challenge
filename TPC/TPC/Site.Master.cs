@@ -89,29 +89,19 @@ namespace TPC
             string userSearch = SearchTextBox.Text.ToLower();
             string sqlQuery = "SELECT dbo.Item.Name, dbo.Ingrediens.Name AS Ingrediens FROM dbo.Item INNER JOIN dbo.Item_Ingrediens ON dbo.Item.ID_Item = dbo.Item_Ingrediens.ID_Item INNER JOIN dbo.Ingrediens ON dbo.Ingrediens.ID_Ingrediens = dbo.Item_Ingrediens.ID_Ingrediens WHERE (dbo.Item.ID_Item IN (SELECT Item_1.ID_Item FROM dbo.Item AS Item_1 INNER JOIN dbo.Item_Ingrediens AS Item_Ingrediens_1 ON Item_1.ID_Item = Item_Ingrediens_1.ID_Item INNER JOIN dbo.Ingrediens AS Ingrediens_1 ON Item_Ingrediens_1.ID_Ingrediens = Ingrediens_1.ID_Ingrediens WHERE(Ingrediens_1.Name LIKE '%' + @search + '%')))";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            Debug.WriteLine(userSearch);
-
-            // Checks if the string contains æ, ø or å, and convertes it to ?.
-            if (userSearch.Contains("æ") == true || userSearch.Contains("ø") == true || userSearch.Contains("å") == true)
-            {
-                userSearch = userSearch.Replace('æ', '?');
-                userSearch = userSearch.Replace('ø', '?');
-                userSearch = userSearch.Replace('å', '?');
-            }
-            Debug.WriteLine(userSearch);
 
             sqlCommand.Parameters.Add("@search", SqlDbType.NVarChar).Value = userSearch;
 
             sqlConnection.Open();
             sqlCommand.ExecuteNonQuery();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter();
-            dataAdapter.SelectCommand = sqlCommand;
-            DataSet dataSet = new DataSet();
-            dataAdapter.Fill(dataSet);
-            dataAdapter.Fill(dataSet);
-            Debug.WriteLine("dataSet Content: " + dataSet.ToString());
-            GridView1.DataSource = dataSet;
-            GridView1.DataBind();
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Debug.WriteLine("\t{0}\t{1}", sqlDataReader.GetString(0), sqlDataReader.GetString(1));
+            }
+
+            sqlDataReader.Close();
 
             sqlConnection.Close();
         }

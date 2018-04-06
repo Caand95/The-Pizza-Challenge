@@ -1,4 +1,3 @@
-use TPC;
 
 CREATE TABLE [Customer] (
   [ID_Customer] int,
