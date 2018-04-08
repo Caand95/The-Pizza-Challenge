@@ -53,17 +53,17 @@
                         <a class="nav-link" runat="server" href="~/Menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" runat="server" href="~/Contact">Kontakt</a>
+                        <a class="nav-link" runat="server" href="~/Contact">Om Os</a>
                     </li>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Account/Login">Admin Login</a></li>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                            <li class="-link"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Menu</a></li>
-                            <li class="-link"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Konto</a></li>
-                            <li class="-link">
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log af" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Menu</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Account/Manage">Administrer Konto</a></li>
+                            <li class="nav-item">
+                                <asp:LoginStatus CssClass="nav-link" runat="server" LogoutAction="Redirect" LogoutText="Log af" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                             </li>
                         </LoggedInTemplate>
                     </asp:LoginView>

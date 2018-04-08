@@ -11,14 +11,18 @@
         <asp:View ID="MenuView" runat="server">
 
             <!-- Displays the menu on page load -->
-            <asp:TextBox ID="TextBox1" runat="server" Height="400px" Width="300px" TextMode="MultiLine"></asp:TextBox>
+            <div class="row" style="margin-left: auto; margin-right: auto; width: 30%">
+            <asp:TextBox ID="TextBox1" runat="server" Height="400px" Width="480px" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
+            </div>
 
         </asp:View>
 
         <asp:View ID="SearchView" runat="server">
 
             <!-- Displays the search result -->
-            <asp:TextBox ID="TextBox3" runat="server" Height="40px" Width="300px" TextMode="MultiLine"></asp:TextBox>
+            <div class="row" style="margin-left: auto; margin-right: auto; width: 30%">
+            <asp:TextBox ID="TextBox3" runat="server" Height="400px" Width="480px" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
+            </div>
 
         </asp:View>
     </asp:MultiView>
