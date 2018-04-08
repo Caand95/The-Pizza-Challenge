@@ -3,40 +3,11 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron text-white bg-dark">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+        <h1>Velkommen til Pane D´oro Italiano</h1>
+        <p class="lead">Vi har ægte Italienske specialiteter. Pizza, Pasta, Sandwich, Salami, Ost, Juice, Vin, Oliven, Italiensk Is, Delikatesser, Nybagt italiensk brød hver dag, Menuer, m.m. Vi har Frokostpizzaer til kr. 50,-. Smag vores Røget Laks, med blandet salat og rucola (olivenolie & balsamico) kr. 52,-. Se vores fulde menukort, og ring og bestil Take Away, så er maden klar når du kommer. Vi tilbyder udbringning fra kr. 30,-.</p>
+        <div>
+            <asp:Button ID="Button1" runat="server" CssClass="btn btn-secondary my-2 my-sm-0" Text="Se vores menu" />
         </div>
     </div>
 
-</asp:Content>
+    </asp:Content>

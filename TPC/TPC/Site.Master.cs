@@ -17,8 +17,6 @@ namespace TPC
     public partial class SiteMaster : MasterPage
     {
 
-        SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString);
-
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -82,28 +80,6 @@ namespace TPC
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-        }
-
-        protected void SearchButton_Click(object sender, EventArgs e)
-        {
-            string userSearch = SearchTextBox.Text.ToLower();
-            string sqlQuery = "SELECT dbo.Item.Name, dbo.Ingrediens.Name AS Ingrediens FROM dbo.Item INNER JOIN dbo.Item_Ingrediens ON dbo.Item.ID_Item = dbo.Item_Ingrediens.ID_Item INNER JOIN dbo.Ingrediens ON dbo.Ingrediens.ID_Ingrediens = dbo.Item_Ingrediens.ID_Ingrediens WHERE (dbo.Item.ID_Item IN (SELECT Item_1.ID_Item FROM dbo.Item AS Item_1 INNER JOIN dbo.Item_Ingrediens AS Item_Ingrediens_1 ON Item_1.ID_Item = Item_Ingrediens_1.ID_Item INNER JOIN dbo.Ingrediens AS Ingrediens_1 ON Item_Ingrediens_1.ID_Ingrediens = Ingrediens_1.ID_Ingrediens WHERE(Ingrediens_1.Name LIKE '%' + @search + '%')))";
-            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-
-            sqlCommand.Parameters.Add("@search", SqlDbType.NVarChar).Value = userSearch;
-
-            sqlConnection.Open();
-            sqlCommand.ExecuteNonQuery();
-
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            while (sqlDataReader.Read())
-            {
-                Debug.WriteLine("\t{0}\t{1}", sqlDataReader.GetString(0), sqlDataReader.GetString(1));
-            }
-
-            sqlDataReader.Close();
-
-            sqlConnection.Close();
         }
     }
 }
