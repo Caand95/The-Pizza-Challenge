@@ -13,13 +13,39 @@ namespace TPC
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["TPCConnectionString"].ConnectionString);
+        SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["TPC"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 MenuMultiView.ActiveViewIndex = 0;
+
+                string sqlQueryMeny = "SELECT name FROM Item";
+                SqlCommand MenuCommand = new SqlCommand(sqlQueryMeny, sqlConnection);
+                sqlConnection.Open();
+                MenuCommand.ExecuteNonQuery();
+
+                SqlDataReader MenuReader = MenuCommand.ExecuteReader();
+
+                if (TextBox1.Text == "")
+                {
+                    while (MenuReader.Read())
+                    {
+                        TextBox1.Text += MenuReader.GetString(0) + "\r";
+                    }
+                }
+                else
+                {
+                    TextBox1.Text = "";
+                    while (MenuReader.Read())
+                    {
+                        TextBox1.Text += MenuReader.GetString(0) + "\r";
+                    }
+                }
+
+                MenuReader.Close();
+                sqlConnection.Close();
             }
         }
 
